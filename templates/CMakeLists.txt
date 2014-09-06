@@ -4,10 +4,13 @@ project(_PACKAGE_NAME_)
 find_package(Eigen REQUIRED)
 include_directories(SYSTEM ${EIGEN_INCLUDE_DIRS})
 
+add_definitions(-DIKTYPE_TRANSFORM_6D)
+
 find_package(catkin REQUIRED COMPONENTS
   moveit_core
   pluginlib
   roscpp
+  tf_conversions
   #eigen_conversions
   )
 
